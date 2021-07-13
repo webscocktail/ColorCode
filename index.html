@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr>
+<head>
+<meta charset="utf=8">
+<link rel="icon" href="favicon.ico" />
+<title> ColorCode </title>
+<style media="screen">
+*{
+	margin:0; padding:0;
+	box-sizing: border-box;
+}
+body{
+	display:grid;
+	place-items:center;
+	height: 100vh;
+	}
+.main{
+	display:flex;
+	align-items:center;
+	justify-content:space-around;
+	height:200px;
+	width:600px;
+	background-color:white;
+	box-shadow:0 0 3px #333;
+	border-radius:10px;
+}
+#colorPanel{
+		background:none;
+		outline:none;
+		border:none;
+		height:40px;
+		width:60px;
+		cursor:pointer;
+	}
+#btn{
+	outline:none;
+	border:none;
+	background:black;
+	color:white;
+	height:40px;
+	width:140px;
+	border-radius:50px;
+	cursor:pointer;
+}
+#box{
+	outline:none;
+	border:2px solid #333;
+	border-radius:50px;
+	height:40px;
+	width:120px;
+	padding:0 10px;
+}
+.logo{
+	display:flex;
+	align-items:center;
+	justify-content:space-around;
+	height:50px;
+	width:275px;
+	background-color:white;
+	box-shadow:0 0 1px #333;
+	border-radius:5px;
+}
+p{
+ font-family: Helvetica;
+ font-weight: 800;
+ }
+</style>
+</head>
+<body>
+<div class="logo">
+<a href="index.html">
+<img alt="logo" src="logocc.png" title="ColorCode" /></a>
+</div>
+<div class="main">
+<p> Generate Color: </p> <input type="color" name="" id="colorPanel">
+<input type="button" id="btn" value="Get Color" onclick="myColor()">
+<p>Result: </p> <input type="text" id="box">
+</div>
+<script type"text/javascript">
+function myColor(){
+		var color = document.getElementById('colorPanel').value;
+		document.body.style.backgroundColor = color;
+		document.getElementById('box').value = color;
+	}
+</script>
+</body>
+</html>
